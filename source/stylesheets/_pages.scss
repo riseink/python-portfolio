@@ -1,0 +1,392 @@
+  .video_background{
+	  width:100%;
+	  height:100vh;
+	  position:fixed;
+  }
+  
+  .fluid-video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	pointer-events: none;
+	position: fixed;
+	top: 0;
+	left: 0; 
+	// -moz-transform: scaleX(-1);
+    //     -o-transform: scaleX(-1);
+    //     -webkit-transform: scaleX(-1);
+    //     transform: scaleX(-1);
+    //     filter: FlipH;
+    //     -ms-filter: "FlipH";
+  }
+  
+  .video_overlay{
+	  position:fixed;
+	  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,d81900+100 */
+	  background: #1e5799; /* Old browsers */
+	  background: -moz-linear-gradient(45deg, #1e5799 0%, #d81900 100%); /* FF3.6-15 */
+	  background: -webkit-linear-gradient(45deg, #1e5799 0%,#d81900 100%); /* Chrome10-25,Safari5.1-6 */
+	  background: linear-gradient(45deg, #1e5799 0%,#d81900 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#d81900',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	  
+	  
+	  
+	  mix-blend-mode: hue;
+	  height:100vh;
+	  width:100vw;
+	  animation: hue_shift 20s infinite;
+	  opacity:.75;
+	  top: 0;
+	  left: 0; 
+	  
+  }
+
+
+  @-webkit-keyframes hue_shift{
+	0%   { 
+				filter: hue-rotate(0deg);  
+			 }
+		  
+	50%
+			{
+			  filter: hue-rotate(180deg);
+			  }
+		  
+	100% { 
+		  filter: hue-rotate(0deg);  
+	
+		  }
+  }
+
+  .capability_container.open{
+	  
+  }
+  
+  .tech_stack_description{
+	  width:75%;
+	  height:307px;
+	  position:relative;
+	  flex-direction:row;
+	  h3, p{
+		  color:white;
+		  
+	  }
+  }
+  
+  .tech_stack_back{
+	  bottom:20px;
+	  right:20px;
+	  color:white;
+	  position:absolute;
+  }
+  .capability_container_wrapper{
+	width:100%;
+	margin-top:150px;
+	margin-left:10%;
+
+  }
+
+  .multiply_border{
+	width:10vh;
+	float:left;
+	margin:-3.55vh 0 0 -2vh;
+	mix-blend-mode:multiply;
+	opacity:.9;
+	color:#000;
+	font-size:10vh;
+	transform:rotate(90deg);
+
+    font-family: 'Quicksand', sans-serif;
+
+    font-family: 'Black Ops One', cursive;
+
+    font-family: 'Syncopate', sans-serif;
+
+
+
+
+
+
+  }
+  .capability_container{
+		width:80%;
+		float:left;
+
+	  position: relative;	
+
+
+	  background:rgba(0,0,0,.9);
+	  mix-blend-mode:multiply;
+	  padding:40px 0;
+	  
+
+
+
+	  }
+	  
+	  h1{
+		  color:white;
+		  text-align:center;
+		  display:block;
+		  font-family: 'Quicksand', sans-serif;
+
+		  
+		  span{
+			  display:block;
+			  font-size:14px;
+			  font-weight:normal;
+			  padding:10px;
+		  }
+  
+	  }
+	  
+	  h1:after{
+		  content:"";
+		  width:80%;
+		  margin-left:10%;
+		  padding-bottom:20px;
+		  border-bottom:1px solid white;
+		  display:block;
+	  }
+	  
+  
+	  .tech_stack{
+		  display:flex;
+		  flex-wrap: wrap;
+		  padding:0 10%;
+		  
+	  }
+	  
+	  .tech_stack:after{
+		  content:"";
+		  width:100%;
+		  padding-bottom:20px;
+		  border-bottom:1px solid white;
+		  display:block;
+		  
+	  }
+	  .quarters{
+		  width:calc(21% - 6px) ;
+		  border:1px solid transparent;
+		  border-bottom:5px solid transparent;
+		  border-right:5px solid transparent;
+		  flex-direction:row;
+		  text-align:center;
+		  color:white;
+		  padding:0 2%;
+		  text-decoration:none;
+		  margin-bottom:20px;
+		  
+	  }
+	  
+	  .quarters:hover{
+		  width:calc(21% - 6px) ;
+		  border:1px solid white;
+		  border-bottom:5px solid white;
+		  border-right:5px solid white;
+
+		  padding:0 2%;
+		  
+	  }
+	  
+	  .quarter_item_1, .quarter_item_5{
+		transform: translateX(-200%);
+
+		opacity:0
+
+	  }
+
+	  .quarter_item_2, .quarter_item_6{
+		transform: translateX(-100%);
+
+		opacity:0
+
+	  }
+
+	  .quarter_item_3, .quarter_item_7{
+		transform: translateX(100%);
+
+		opacity:0
+
+	  }
+	  .quarter_item_4, .quarter_item_8{
+		transform: translateX(200%);
+
+		opacity:0
+
+	  }
+
+	  .quarter_item_1, .quarter_item_2, .quarter_item_3, .quarter_item_4{
+		transform: translateY(100%);
+
+	  }
+	  .quarter_item_8, .quarter_item_7, .quarter_item_6, .quarter_item_5{
+		transform: translateY(200%);
+
+	  }
+  
+	  .capability_container:before{
+		content: "";
+		position: absolute;
+		bottom: -5.5%;
+		left: -74.5%;
+		background-color: white;
+		padding-left: 50%;
+		width: 80vh;
+		z-index: -1;
+		transform-origin: 0 0;
+		transform: rotate(-45deg) skewX(-45deg);
+		height: 100%;
+	  }
+
+	  .work_container{
+		  width:100%;
+		  display:inline-block;
+		  position:relative;
+		  vertical-align: top;
+	  }
+
+	  .split_contianer{
+		  height: 60vh;
+		  position: relative;
+		  width:50%;
+		  background-position: center;
+		  background-size:cover;
+		  background-repeat:no-repeat;
+		  display:inline-block;
+		  float:left;
+
+		  *{
+			pointer-events: none;
+		  }
+	  }
+
+	.split_contianer.mouseover{
+		animation: split_contianer_large 3s infinite linear;
+	}
+
+	.split_contianer.mouseout{
+		animation: split_contianer_small 3s infinite linear;
+	}
+
+	.split_contianer.mouseout.wind_down{
+		animation: split_contianer_baseline_small 1s linear;
+	}
+	.split_contianer.mouseover.wind_down{
+		animation: split_contianer_baseline_large 1s linear;
+	}
+
+	.split_contianer.wind_this_up{
+		animation: split_contianer_baseline_large_up 1s linear;
+	}
+	.split_contianer.wind_that_up{
+		animation: split_contianer_baseline_small_up 1s linear;
+	}
+
+
+	@-webkit-keyframes split_contianer_baseline_small{
+		0%   { width:40%;}
+		100% { width:50%;}
+	}
+
+	@-webkit-keyframes split_contianer_baseline_large{
+		0%   { width:60%;}
+		100% { width:50%;}
+	}
+
+	@-webkit-keyframes split_contianer_baseline_small_up{
+		0%   { width:50%;}
+		100% { width:40%;}
+	}
+
+	@-webkit-keyframes split_contianer_baseline_large_up{
+		0%   { width:50%;}
+		100% { width:60%;}
+	}
+
+	@-webkit-keyframes split_contianer_large{
+		0%   { width:60%;}
+		50%  { width:65%;}
+		100% { width:60%;}
+	}
+
+
+	@-webkit-keyframes split_contianer_small{
+		0%   { width:40%;}
+		50%  { width:35%;}
+		100% { width:40%;}
+	}
+	.split_contianer_left h2{
+		position:absolute;
+		top:25px;
+		left:25px;
+		z-index:1;
+	}
+	.overlay{
+		height: calc(100% - 40px);
+		width: calc(100% - 40px);
+		position: absolute;
+		left:20px;
+		top:20px;
+		background:rgba(0,0,0,.8);
+		background-blend-mode: multiply;
+
+		color:#fff;
+		display:none;
+
+		.description{
+			position: absolute;
+			top:35px;
+			left:5px;
+			width:45vw;
+		}
+
+	}
+
+	.split_contianer_dark{
+		h2{
+			color:white;
+		}
+	}
+
+	.split_contianer_light.mouseover, .split_contianer_light.wind_this_up{
+		h2{
+			color:#fff;
+		}
+	}
+
+	.split_contianer_light,.split_contianer_light.wind_down {
+		h2{
+			color:#000;
+		}
+	}
+
+	.split_contianer.split_contianer_right{
+
+		h2{
+		position:absolute;
+		top:25px;
+		right:25px;
+		z-index:1;
+		}
+
+		.overlay{
+			position: absolute;
+			right:20px;
+			top:20px;	
+
+			.description{
+				position: absolute;
+				top:35px;
+				right:5px;
+				left:auto;
+				width:45vw;
+				text-align:right;
+			}
+		} 
+
+	}
+
+	.tech_stack_open{
+		display:none
+	}

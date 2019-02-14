@@ -1,0 +1,29 @@
+@charset "utf-8";
+// Do not include in Build
+
+@import "shared/vars";
+@import '../../node_modules/jeet/scss/index';
+@import "mixins";
+
+@import "normalize";
+@import "nav";
+@import "nav-theme";
+@import "pages";
+@import "components/search";
+@import "components/menu_icon";
+@import "components/global";
+@import "footer";
+@import "utility";
+
+@import "grid";
+
+// set Max Layout 
+
+.wrapper {
+  @include center(1200px);
+  height:100%;
+  
+}
+
+
+

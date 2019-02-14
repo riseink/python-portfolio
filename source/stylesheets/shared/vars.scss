@@ -1,0 +1,79 @@
+@mixin respond-to($breakpoint) {
+	
+  
+  @if $breakpoint == "xs" {
+    @media (max-width: 350px) {
+      @content;
+    }
+  }
+  
+  @else if $breakpoint == "sm" {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+  
+ 
+  @else if $breakpoint == "md" {
+    @media (max-width: 780px) {
+      @content;
+    }
+  }
+ 
+  @else if $breakpoint == "lg" {
+    @media (max-width: 900px) {
+      @content;
+    }
+  }
+  
+  @else if $breakpoint == "xl" {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+  
+  @else if $breakpoint == "nav-mobile" {
+    @media (max-width: 780px) {
+      @content;
+    }
+  }
+  
+  @else if $breakpoint == "nav-desktop" {
+    @media (min-width: 780px) {
+      @content;
+    }
+  }
+  
+}
+
+
+$font-primary: Impact, "Arial Black", "sans serif";
+$font-copy: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$green: #00843f;
+$blue: #0086ba;
+
+
+$light-gray:#e8e8e8;
+$dark-gray:#434343;
+
+$white: #ffffff;
+
+
+
+//set space between columns
+
+$gutter-width:40px;
+
+//calculations for above (md) breakpoint
+
+$gutter: 0 ($gutter-width/2);
+$gutter-bottom:$gutter-width;
+$gutter-columns:0 ($gutter-width/4);
+
+//calculations for below (md) breakpoint
+
+$gutter-mobile:0 ($gutter-width/4);
+$gutter-bottom-mobile:($gutter-width/2);
+$gutter-columns-mobile:0 ($gutter-width/8);
+	

@@ -1,0 +1,12 @@
+
+.full-width-container{
+  	@include span-full;
+	padding-bottom:$gutter-bottom;
+    @include respond-to(md) {
+		padding-bottom:$gutter-bottom-mobile;
+		
+	}
+
+}
+
+

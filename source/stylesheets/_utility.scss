@@ -1,0 +1,25 @@
+
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  *zoom: 1;
+}
+.img-responsive{
+	width:100%;
+	height:auto;
+}
+
+.hide{
+	display:none!important;
+}
+
+.position-relative{
+	position:relative;
+}
+
