@@ -1,0 +1,33 @@
+// Baseline
+// --------
+// Variables for global elements.
+
+// body
+$background-color: $white !default;
+
+// hr
+$hr-height: 0.5rem !default;
+$hr-width: 5rem !default;
+$hr-margin: 1rem 0rem !default;
+$hr-color: $primary !default;
+
+// Common margin/padding values
+$margin-map: (
+  small-screen: (
+    none: 0,
+    xx-sm: 0.5rem,
+    x-sm: 1rem,
+    sm: 1rem,
+    md: 1.25rem,
+    lg: 3rem
+  ),
+
+  large-screen: (
+    none: 0,
+    xx-sm: 0.5rem,
+    x-sm: 1rem,
+    sm: 1.5rem,
+    md: 3rem,
+    lg: 6rem
+  )
+) !default;

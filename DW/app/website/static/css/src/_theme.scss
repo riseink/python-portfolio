@@ -1,0 +1,106 @@
+// Theme
+// -----
+// Uncomment and set these variables to theme the site.
+
+// Define themes
+// TODO: Decide on a standard set of default properties to theme
+$themes: (
+	light: (
+		backgroundColor: $white,
+		textColor: $black,
+		linkColor: $link-color,
+		primaryColor: $primary,
+		secondaryColor: $secondary,
+		tertiaryColor: $tertiary,
+		fontFamilyHeadings: $font-family-headings,
+		fontFamilyBody: $font-family-body,
+
+		navBackgroundColor: $white,
+		navTextColor: $black,
+		navLinkColorHover: $primary,
+		navBoxShadow: 0px 2px 3px rgba(0,0,0,0.1),
+		violatorBackgroundColor: $white,
+		violatorTextColor: $black,
+		violatorBoxShadow: 0px -2px 3px rgba(0,0,0,0.1),
+	),
+	dark: (
+		backgroundColor: $black,
+		textColor: $white,
+		linkColor: $link-color,
+		primaryColor: $med-gray,
+		secondaryColor: $med-gray,
+		tertiaryColor: $med-gray,
+
+		navBackgroundColor: transparent,
+		navTextColor: $white,
+		navLinkColorHover: $med-gray,
+		navBoxShadow: none,
+		navDropdownMenuBackgroundColor: $black,
+		violatorBackgroundColor: $white,
+		violatorTextColor: $black,
+		violatorBoxShadow: none,
+		carouselSplitContentBackgroundColor: $white,
+		carouselSplitContentTextColor: $black,
+	),
+	scc: (
+		backgroundColor: $white,
+		textColor: $black,
+		linkColor: #a00a0f,
+		primaryColor: #a00a0f,
+		secondaryColor: #eee,
+		tertiaryColor: $black,
+		fontFamilyHeadings: 'Verdana',
+		fontFamilyBody: 'Georgia',
+	),
+	// Define custom themes here
+	// customTheme: (
+	// 	backgroundColor:,
+	// 	textColor:,
+	// ),
+	none: ()
+);
+
+/**************************** IMPORTANT ***************************************/
+
+// Set the active theme here
+$active-theme: light; // choose a value from $themes
+$theme: map-get($themes, $active-theme);
+
+// Note!
+// -----
+//
+// Setting the active theme variable alone will not apply it.
+//
+// To apply the theme's styles, we need to override the variables that correspond
+// to each theme property. (e.g. override `$text-color` with `$theme`'s `textColor` property)
+//
+// Below, we set the main theme variables. These trickle down to many others,
+// so changing any of these will have a cascade effect. There are many more
+// specific variables that can override any of these cascaded styles.
+//
+// TODO: An overrideAll function that parses theme keys and overrides corresponding
+// variables (should be default behavior)
+
+$background-color: map-get($theme, backgroundColor);
+$text-color: map-get($theme, textColor);
+$link-color: map-get($theme, linkColor);
+$primary: map-get($theme, primaryColor);
+$secondary: map-get($theme, secondaryColor);
+$tertiary: map-get($theme, tertiaryColor);
+$font-family-headings: map-get($theme, fontFamilyHeadings);
+$font-family-body: map-get($theme, fontFamilyBody);
+
+$nav-text-color: map-get($theme, navTextColor);
+$nav-link-color-hover: map-get($theme, navLinkColorHover);
+$nav-dropdown-menu-bg-color: map-get($theme, navDropdownMenuBackgroundColor);
+$nav-bg-color: map-get($theme, navBackgroundColor);
+$nav-box-shadow: map-get($theme, navBoxShadow);
+
+$violator-text-color: map-get($theme, violatorTextColor);
+$violator-bg-color: map-get($theme, violatorBackgroundColor);
+$violator-box-shadow: map-get($theme, violatorBoxShadow);
+
+$carousel-split-content-background-color: map-get($theme, carouselSplitContentBackgroundColor);
+$carousel-split-content-text-color: map-get($theme, carouselSplitContentTextColor);
+
+/******************************************************************************/

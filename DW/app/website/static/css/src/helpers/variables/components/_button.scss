@@ -1,0 +1,30 @@
+// Buttons
+// -------
+
+// All buttons
+$btn-font-family: $font-family-headings !default;
+$btn-border-radius: 3px !default;
+
+// Primary (Default)
+$btn-color: $white !default;
+$btn-bg-color: $primary !default;
+$btn-border: 2px solid $btn-bg-color !default;
+$btn-color-hover: $btn-color !default;
+$btn-bg-color-hover: lighten($btn-bg-color, 10%) !default;
+$btn-border-hover: 2px solid $btn-bg-color-hover !default;
+
+// Secondary
+$btn-secondary-color: $white !default;
+$btn-secondary-bg-color: $secondary !default;
+$btn-secondary-border: 2px solid $btn-secondary-bg-color !default;
+$btn-secondary-color-hover: $btn-secondary-color !default;
+$btn-secondary-bg-color-hover: lighten($btn-secondary-bg-color, 10%) !default;
+$btn-secondary-border-hover: 2px solid $btn-secondary-bg-color-hover !default;
+
+// Tertiary
+$btn-tertiary-color: $white !default;
+$btn-tertiary-bg-color: $tertiary !default;
+$btn-tertiary-border: 2px solid $btn-tertiary-bg-color !default;
+$btn-tertiary-color-hover: $btn-tertiary-color !default;
+$btn-tertiary-bg-color-hover: lighten($btn-tertiary-bg-color, 10%) !default;
+$btn-tertiary-border-hover: 2px solid $btn-tertiary-bg-color-hover !default;

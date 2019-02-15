@@ -1,0 +1,156 @@
+// Typography
+// ----------
+// Variables related to typography/fonts.
+
+// Colors
+$text-color: $black !default;
+$text-color-reversed: $white !default;
+$link-color: $blue !default;
+
+$text-color-light: $white !default;
+$text-color-dark: $black !default;
+
+// Font Families
+$font-family-1: Helvetica, Arial, sans-serif !default;
+$font-family-2: Palatino, Times, serif !default;
+$font-family-3: Geneva, sans-serif !default;
+
+$font-family-default: $font-family-1 !default;
+$font-family-body: $font-family-default !default;
+$font-family-headings: $font-family-default !default;
+
+// Font weights
+$bold: 800 !default;
+$semibold: 600 !default;
+$regular: 400 !default;
+$light: 300 !default;
+$thin: 200 !default;
+
+$font-weight-body: $regular !default;
+$font-weight-headings: $bold !default;
+
+// Font sizes
+$baseline: 16px !default;
+$baseline-font-size: $baseline !default;
+
+
+// Font sizes on "small" (<=tablet) screens
+// rems based on $baseline-font-size
+$font-sizes-small: (
+  h1-size: (
+    font-size: 2rem,
+    font-weight: $bold,
+    line-height: 1.15,
+    margin: 1rem 0,
+  ),
+
+  h2-size: (
+    font-size: 1.5rem,
+    font-weight: $bold,
+    line-height: 1.15,
+    margin: 1rem 0,
+  ),
+
+  h3-size: (
+    font-size: 1.25rem,
+    font-weight: $bold,
+    line-height: 1.15,
+    margin: 1rem 0,
+  ),
+
+  h4-size: (
+    font-size: 1rem,
+    font-weight: $bold,
+    line-height: 1.15,
+    margin: 1rem 0,
+  ),
+
+  h5-size: (
+    font-size: 0.875rem,
+    font-weight: $bold,
+    line-height: 1.15,
+    margin: 1rem 0,
+  ),
+
+  h6-size: (
+    font-size: 0.75rem,
+    font-weight: $bold,
+    line-height: 1.15,
+    margin: 1rem 0,
+  ),
+
+  paragraph: (
+    font-size: 1rem,
+    font-weight: $regular,
+    line-height: 1.5rem,
+    margin: 1rem 0,
+  ),
+
+  small-size: (
+    font-size: 0.75rem,
+    font-weight: $regular,
+    line-height: 1rem,
+    margin: 1rem 0,
+  )
+) !default;
+
+
+// Font sizes on "large" (>tablet) screens
+// rems based on $baseline-font-size
+$font-sizes-large: (
+  h1-size: (
+    font-size: 3rem,
+    font-weight: $bold,
+    line-height: 1.15,
+    margin: 1rem 0,
+  ),
+
+  h2-size: (
+    font-size: 2rem,
+    font-weight: $bold,
+    line-height: 1.15,
+    margin: 1rem 0,
+  ),
+
+  h3-size: (
+    font-size: 1.5rem,
+    font-weight: $bold,
+    line-height: 1.15,
+    margin: 1rem 0,
+  ),
+
+  h4-size: (
+    font-size: 1rem,
+    font-weight: $bold,
+    line-height: 1.15,
+    margin: 1rem 0,
+  ),
+
+  h5-size: (
+    font-size: 0.875rem,
+    font-weight: $bold,
+    line-height: 1.15,
+    margin: 1rem 0,
+  ),
+
+  h6-size: (
+    font-size: 0.75rem,
+    font-weight: $bold,
+    line-height: 1.15,
+    margin: 1rem 0,
+  ),
+
+  paragraph: (
+    font-size: 1rem,
+    font-weight: $regular,
+    line-height: 1.5,
+    margin: 1rem 0,
+  ),
+
+  small-size: (
+    font-size: 0.75rem,
+    font-weight: $regular,
+    line-height: 1.25,
+    margin: 0,
+  )
+) !default;

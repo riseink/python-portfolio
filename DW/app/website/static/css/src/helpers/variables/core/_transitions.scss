@@ -1,0 +1,13 @@
+// Transitions
+// -----------
+// Transition-related variables.
+
+$transition-slow: 1000ms !default;
+$transition-medium: 500ms !default;
+$transition-fast: 150ms !default;
+$transition-duration: $transition-medium !default;
+$transition-easing: ease-in-out !default;
+
+// Custom easing functions
+$default-cubic-bezier: cubic-bezier(.79,.08,.41,.1) !default;
+$glide: cubic-bezier(.14,.23,.13,.32) !default;

@@ -1,0 +1,140 @@
+// Utility
+// -------
+// Base utility classes. These classes can also be applied from the Wagtail Admin via
+// "Container CSS Classes" snippets.
+
+// Positions
+.position-relative { position: relative; }
+.position-fixed { position: fixed; }
+.position-sticky { position: sticky; }
+
+// Wrappers
+.wrapper-md { max-width: $wrapper-md; margin: 0 auto }
+.wrapper { max-width: $wrapper; margin: 0 auto }
+.wrapper-xl { max-width: $wrapper-xl; margin: 0 auto }
+.wrapper-padded { padding: 0 50px; @inlcude respond-to(md) { padding: 0 } }
+.wrapper-padded-sm { padding: 0 25px; @inlcude respond-to(sm) { padding: 0 } }
+
+// Displays
+.display-inline { display: inline; }
+.display-none { display: none; }
+
+// Text colors
+.text {
+  @include color-modifiers('color');
+}
+// Fill colors
+.bg {
+  @include color-modifiers('background');
+}
+
+// (Flexbox) Vertical alignment
+.align-items-center { align-items: center; }
+.align-items-top { align-items: flex-start; }
+.align-items-bottom { align-items: flex-end; }
+.align-items-stretch { align-items: stretch; }
+
+// (Flexbox) Horizontal alignment
+.justify-content-center { justify-content: center; }
+.justify-content-left { justify-content: flex-start; }
+.justify-content-right { justify-content: flex-end; }
+.justify-content-space-between { justify-content: space-between; }
+.justify-content-space-around { justify-content: space-around; }
+
+// Text alignment
+.text-align-center { text-align: center; }
+.text-align-justify { text-align: justify; }
+.text-align-left { text-align: left; }
+.text-align-right { text-align: right; }
+
+// Font weights
+.font-weight-bold { font-weight: $bold; }
+.font-weight-semibold { font-weight: $semibold; }
+.font-weight-regular{ font-weight: $regular; }
+.font-weight-light { font-weight: $light; }
+.font-weight-thin { font-weight: $thin; }
+
+// Text decoration
+.text-decoration-underline {
+  text-decoration: underline;
+}
+
+// Margin and padding classes
+// --------------------------
+// x == {property}-left AND {property}-right
+// y == {property}-top AND {property}-bottom
+// l == {property}-left
+// r == {property}-right
+// t == {property}-top
+// b == {property}-bottom
+//
+// e.g. `.padding-md-x` for medium-sized padding-left and padding-right
+@each $size, $value in map-get($margin-map, small-screen) {
+  // Margin
+  .margin-#{$size} {
+    margin: $value;
+    @media(min-width: $sm-breakpoint) { margin: map-deep-get($margin-map, large-screen, $size) }
+  }
+  .margin-#{$size}-x {
+    margin-left: $value; margin-right: $value;
+    @media(min-width: $sm-breakpoint) { margin-left: map-deep-get($margin-map, large-screen, $size); margin-right: map-deep-get($margin-map, large-screen, $size) }
+  }
+  .margin-#{$size}-y {
+    margin-top: $value; margin-bottom: $value;
+    @media(min-width: $sm-breakpoint) { margin-top: map-deep-get($margin-map, large-screen, $size); margin-bottom: map-deep-get($margin-map, large-screen, $size) }
+  }
+  .margin-#{$size}-l {
+    margin-left: $value;
+    @media(min-width: $sm-breakpoint) { margin-left: map-deep-get($margin-map, large-screen, $size) }
+  }
+  .margin-#{$size}-r {
+    margin-right: $value;
+    @media(min-width: $sm-breakpoint) { margin-right: map-deep-get($margin-map, large-screen, $size) }
+  }
+  .margin-#{$size}-t {
+    margin-top: $value;
+    @media(min-width: $sm-breakpoint) { margin-top: map-deep-get($margin-map, large-screen, $size) }
+  }
+  .margin-#{$size}-b {
+    margin-bottom: $value;
+    @media(min-width: $sm-breakpoint) { margin-bottom: map-deep-get($margin-map, large-screen, $size) }
+  }
+  // Padding
+  .padding-#{$size} {
+    padding: $value;
+    @media(min-width: $sm-breakpoint) { padding: map-deep-get($margin-map, large-screen, $size) }
+  }
+  .padding-#{$size}-x {
+    padding-left: $value; padding-right: $value;
+    @media(min-width: $sm-breakpoint) { padding-left: map-deep-get($margin-map, large-screen, $size); padding-right: map-deep-get($margin-map, large-screen, $size) }
+  }
+  .padding-#{$size}-y {
+    padding-top: $value; padding-bottom: $value;
+    @media(min-width: $sm-breakpoint) { padding-top: map-deep-get($margin-map, large-screen, $size); padding-bottom: map-deep-get($margin-map, large-screen, $size) }
+  }
+  .padding-#{$size}-l {
+    padding-left: $value;
+    @media(min-width: $sm-breakpoint) { padding-left: map-deep-get($margin-map, large-screen, $size) }
+  }
+  .padding-#{$size}-r {
+    padding-right: $value;
+    @media(min-width: $sm-breakpoint) { padding-right: map-deep-get($margin-map, large-screen, $size) }
+  }
+  .padding-#{$size}-t {
+    padding-top: $value;
+    @media(min-width: $sm-breakpoint) { padding-top: map-deep-get($margin-map, large-screen, $size) }
+  }
+  .padding-#{$size}-b {
+    padding-bottom: $value;
+    @media(min-width: $sm-breakpoint) { padding-bottom: map-deep-get($margin-map, large-screen, $size) }
+  }
+}
+
+// Miscellaneous
+.img-responsive {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.clearfix { @include clearfix; }

@@ -1,0 +1,10 @@
+.close {
+	display: block;
+	position: absolute;
+    right: 20px;
+    top: 0px;
+	width: 48px;
+	height: 48px;
+	background: $primary;
+	cursor: pointer;
+}

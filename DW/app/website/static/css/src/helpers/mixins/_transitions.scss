@@ -1,0 +1,34 @@
+// Transitions
+// -----------
+// Transition-related mixins.
+
+@mixin transition_all {
+	transition: all $transition-duration $transition-easing;
+	-moz-transition: all $transition-duration $transition-easing;
+	-webkit-transition: all $transition-duration $transition-easing;
+}
+
+@mixin transition_Z {
+	transition: all $transition-duration $transition-easing;
+	-moz-transition: all $transition-duration $transition-easing;
+	-webkit-transition: all $transition-duration $transition-easing;
+	-webkit-transform: translateZ(0px);
+}
+
+@mixin transition_color {
+	transition: color $transition-duration $transition-easing;
+	-moz-transition: color $transition-duration $transition-easing;
+	-webkit-transition: color $transition-duration $transition-easing;
+}
+
+@mixin transition_border {
+	transition: border $transition-duration $transition-easing;
+	-moz-transition: border $transition-duration $transition-easing;
+	-webkit-transition: border $transition-duration $transition-easing;
+}
+
+@mixin transition_opacity {
+	transition: opacity $transition-duration $transition-easing;
+	-moz-transition: opacity $transition-duration $transition-easing;
+	-webkit-transition: opacity $transition-duration $transition-easing;
+}

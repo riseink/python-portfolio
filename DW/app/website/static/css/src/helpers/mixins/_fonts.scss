@@ -1,0 +1,43 @@
+// Fonts
+// -----
+// Font-related mixins.
+
+// Apply font styles for "small" screens
+@mixin font-small($size) {
+	font-size:      map-deep-get($font-sizes-small, $size, font-size);
+	line-height:    map-deep-get($font-sizes-small, $size, line-height);
+	margin:  		map-deep-get($font-sizes-small, $size, margin);
+}
+
+// Apply font styles for "large" screens
+@mixin font-large($size) {
+	font-size:      map-deep-get($font-sizes-large, $size, font-size);
+	line-height:    map-deep-get($font-sizes-large, $size, line-height);
+	margin:  		map-deep-get($font-sizes-large, $size, margin);
+}
+
+@mixin responsive-font($size, $breakpointName:"") {
+	// small screen typography by default
+	@include font-small($size);
+
+	// if a breakpoint is passed as an argument,
+	// switch to large-screen typography at that
+	// breakpoint
+	@if $breakpointName != "" {
+		@include larger-than($breakpointName) {
+			@include font-large($size);
+		}
+	}
+	// else, as a default, switch to large-screen typography at
+	// the flex container breakpoint
+	@else {
+		@include larger-than($flex-container-breakpoint) {
+			@include font-large($size);
+		}
+	}
+}
+
+@mixin antialias {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}

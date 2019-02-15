@@ -1,0 +1,30 @@
+// Flexbox
+// -------
+// Flexbox-related variables.
+
+// Default breakpoint at which flex containers switch from column to row
+$flex-breakpoint: md !default;
+
+// Number of flex-grow classes
+$flex-grow-max: 5 !default;
+
+// Flex container default heights
+$flex-height-xs: $container-height-xs !default;
+$flex-height-sm: $container-height-sm !default;
+$flex-height-md: $container-height-md !default;
+$flex-height-lg: $container-height-lg !default;
+$flex-height-xl: $container-height-xl !default;
+
+// Flex container mobile heights
+$flex-height-mobile-xs: $container-height-mobile-xs !default;
+$flex-height-mobile-sm: $container-height-mobile-sm !default;
+$flex-height-mobile-md: $container-height-mobile-md !default;
+$flex-height-mobile-lg: $container-height-mobile-lg !default;
+$flex-height-mobile-xl: $container-height-mobile-xl !default;
+
+// List of available flex sizes
+$flex-sizes: xs, sm, md, lg, xl !default;
+
+// By default, switch from columns to rows
+// at screens wider than the md breakpoint (768px)
+$flex-container-breakpoint: md !default;

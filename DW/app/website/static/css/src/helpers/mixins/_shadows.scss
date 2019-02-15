@@ -1,0 +1,9 @@
+// Shadows
+// -------
+// Shadow effect-related mixins.
+
+@mixin shadow {
+  -webkit-box-shadow: 0px 0px 28px 1px rgba(28,28,34,0.26);
+  -moz-box-shadow: 0px 0px 28px 1px rgba(28,28,34,0.26);
+  box-shadow: 0px 0px 28px 1px rgba(28,28,34,0.26);
+}

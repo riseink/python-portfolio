@@ -1,0 +1,46 @@
+// Baseline
+// --------
+// Base styles for global elements.
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: $text-color;
+	background: $background-color;
+  overflow-x: hidden;
+  font-size: $baseline-font-size;
+  @include antialias;
+
+	// Show baseline grid
+	// background-image: repeating-linear-gradient(to bottom, transparent 0px, transparent ($baseline - 1), $primary $baseline, $primary $baseline);
+
+	&.no-scroll {
+	  overflow-y: hidden !important;
+	}
+}
+
+hr {
+  background-color: $hr-color;
+  width: $hr-width / 2;
+  height: $hr-height / 2;
+  margin: $hr-margin / 2;
+  display: inline-block;
+  border: none;
+  &.full {
+    height: 1px;
+    width: 100%;
+  }
+  @include larger-than(md) {
+    margin: 1rem 0;
+    width: $hr-width;
+    height: $hr-height;
+  }
+}
+
+a {
+  color: $link-color;
+}

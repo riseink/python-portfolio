@@ -1,0 +1,26 @@
+// Utilities
+// -----------
+// Utility mixins.
+
+@mixin user-select($value: none) {
+  -webkit-user-select: $value;
+  -moz-user-select: $value;
+  -ms-user-select: $value;
+  user-select: $value;
+}
+
+@mixin clearfix() {
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
+@mixin color-modifiers($attribute) {
+  @each $name, $hex in $colors {
+    &-#{$name} {
+      #{$attribute}: $hex;
+    }
+  }
+}

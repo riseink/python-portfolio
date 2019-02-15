@@ -1,0 +1,73 @@
+// Colors
+// ------
+// A default color palette.
+
+// Base theme colors
+$pure-white: #ffffff !default;
+$pure-black: #000000 !default;
+$white: #f3f3f3 !default;
+$black: #151515 !default;
+$dark-gray: #333333 !default;
+$med-gray: #939598 !default;
+$light-gray: #d1d3d4 !default;
+$red: #ee3322 !default;
+$orange: #f47f16 !default;
+$yellow: #ffc107 !default;
+$green: #68af15 !default;
+$blue: #042ba0 !default;
+
+// Extra colors
+$scc: #a00a0f !default;
+$salmon: salmon !default;
+$darksalmon: darksalmon !default;
+$firebrick: firebrick !default;
+$darkred: darkred !default;
+$darkblue: darkblue !default;
+$cornflowerblue: cornflowerblue !default;
+$lightsteelblue: lightsteelblue !default;
+$steelblue: steelblue !default;
+
+// Messaging colors
+$success: $green !default;
+$warning: $yellow !default;
+$error: $red !default;
+
+// Brand color palette
+$primary: $scc !default;
+$secondary: $scc !default;
+$tertiary: $scc !default;
+
+// Color map used to auto-generate utility classes
+$colors: (
+
+	// TODO: this is storing the hex values NOW, but these variables
+	// are changing in _theme.scss. Basically, utility classes are using the default
+	// colors, not the ones that are appropriate for the current theme.
+	//
+	// This is really only an issue for primary/secondary/tertiary and success/error/warning
+	// since they are the only ones that might change in a theme. The rest are just
+	// the names of the colors.
+
+	pure-black: $pure-black,
+	pure-white: $pure-white,
+	black: $black,
+	white: $white,
+
+	dark-gray: $dark-gray,
+	med-gray: $med-gray,
+	light-gray: $light-gray,
+
+	red: $red,
+	orange: $orange,
+	yellow: $yellow,
+	green: $green,
+	blue: $blue,
+
+	primary: $primary,
+	secondary: $secondary,
+	tertiary: $tertiary,
+
+	success: $success,
+	warning: $warning,
+	error: $error,
+) !default;

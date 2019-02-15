@@ -1,0 +1,23 @@
+// Breakpoints
+// -----------
+// Breakpoint-related mixins.
+
+// Fire on screens larger than the specified breakpoint
+@mixin larger-than($breakpoint) {
+  @if $breakpoint == "xxs" { @media (min-width: $xxs-breakpoint + 1) { @content; } }
+  @else if $breakpoint == "xs" { @media (min-width: $xs-breakpoint + 1) { @content; } }
+  @else if $breakpoint == "sm" { @media (min-width: $sm-breakpoint + 1) { @content; } }
+  @else if $breakpoint == "md" { @media (min-width: $md-breakpoint + 1) { @content; } }
+  @else if $breakpoint == "lg" { @media (min-width: $lg-breakpoint + 1) { @content; } }
+  @else if $breakpoint == "xl" { @media (min-width: $xl-breakpoint + 1) { @content; } }
+}
+
+// Fire on screens smaller than or equal to the specified breakpoint
+@mixin smaller-than-or-equal-to($breakpoint) {
+  @if $breakpoint == "xxs" { @media (max-width: $xxs-breakpoint) { @content; } }
+  @else if $breakpoint == "xs" { @media (max-width: $xs-breakpoint) { @content; } }
+  @else if $breakpoint == "sm" { @media (max-width: $sm-breakpoint) { @content; } }
+  @else if $breakpoint == "md" { @media (max-width: $md-breakpoint) { @content; } }
+  @else if $breakpoint == "lg" { @media (max-width: $lg-breakpoint) { @content; } }
+  @else if $breakpoint == "xl" { @media (max-width: $xl-breakpoint) { @content; } }
+}

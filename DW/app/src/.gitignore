@@ -1,0 +1,6 @@
+*
+!.gitignore
+!repolist.txt
+!requirements.txt
+!*.sh
+!.legacyrepos.txt

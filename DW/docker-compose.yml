@@ -1,0 +1,32 @@
+version: "3"
+
+services:
+  web:
+    env_file:
+      - ./env/aws.env
+      - ./env/dev.env
+    build:
+      context: ./app
+      args:
+        - PYTHONPATH
+        - ENV_PROD=0
+    ports:
+      - "8000:8000"
+    command: gunicorn -b :8000 website.wsgi --workers 4 --timeout 90
+    links:
+      - db
+    volumes:
+      - ./app:/app
+      - ./docs:/docs
+  db:
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+    volumes:
+      - data:/var/lib/mysql
+        # mysql custom config files
+      - ./mysql_conf.d:/etc/mysql/conf.d
+    ports:
+      - "3306:3306"
+volumes:
+  data:

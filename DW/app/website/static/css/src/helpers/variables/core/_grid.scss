@@ -1,0 +1,19 @@
+// Grid
+// ----
+// Grid-related variables.
+
+// set space between columns
+
+$gutter-width: 50px !default;
+
+// calculations for above (md) breakpoint
+
+$gutter: 0 ($gutter-width/2) !default;
+$gutter-bottom:$gutter-width !default;
+$gutter-columns:0 ($gutter-width/4) !default;
+
+// calculations for below (md) breakpoint
+
+$gutter-mobile:0 ($gutter-width/4) !default;
+$gutter-bottom-mobile:($gutter-width/2) !default;
+$gutter-columns-mobile:0 ($gutter-width/8) !default;

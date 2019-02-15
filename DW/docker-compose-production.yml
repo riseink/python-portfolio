@@ -1,0 +1,32 @@
+version: "3"
+
+services:
+  web:
+    env_file:
+      - ./env/aws.env
+      - ./env/production.env
+    build:
+      context: ./app
+      args:
+        - PYTHONPATH
+        - ENV_PROD=1
+    ports:
+      - "80:8000"
+    command: gunicorn -b :8000 website.wsgi --workers 4 --timeout 90
+  # NOTE: The db container is included for testing, but once in production you
+  #       may use an external database (e.g. RDS). When the db container is no
+  #       longer necessary, remove it from this file and set the corresponding
+  #       environment variables (DB_HOST, DB_USERNAME, etc) in
+  #       env/production.env
+  db:
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+    volumes:
+      - data:/var/lib/mysql
+        # mysql custom config files
+      - ./mysql_conf.d:/etc/mysql/conf.d
+    ports:
+      - "3306:3306"
+volumes:
+  data:

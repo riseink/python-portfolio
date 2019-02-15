@@ -1,0 +1,75 @@
+// Fonts
+// -----
+// Local font file configuration.
+
+@font-face {
+    font-family: 'Neutraface 2 Text';
+    src: local('Neutraface 2 Text Bold Italic'),
+        url('base/fonts/Neutraface2Text-BoldItalic.woff2') format('woff2'),
+        url('base/fonts/Neutraface2Text-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Neutraface 2 Text';
+    src: local('Neutraface 2 Text Light Italic'),
+        url('base/fonts/Neutraface2Text-LightItalic.woff2') format('woff2'),
+        url('base/fonts/Neutraface2Text-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Neutraface 2 Text';
+    src: local('Neutraface 2 Text Bold'),
+        url('base/fonts/Neutraface2Text-Bold.woff2') format('woff2'),
+        url('base/fonts/Neutraface2Text-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neutraface 2 Text Demi';
+    src: local('Neutraface 2 Text Demi Italic'),
+        url('base/fonts/Neutraface2Text-DemiItalic.woff2') format('woff2'),
+        url('base/fonts/Neutraface2Text-DemiItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Neutraface 2 Text Book';
+    src: local('Neutraface 2 Text Book Italic'),
+        url('base/fonts/Neutraface2Text-BookItalic.woff2') format('woff2'),
+        url('base/fonts/Neutraface2Text-BookItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Neutraface 2 Text';
+    src: local('Neutraface 2 Text Light'),
+        url('base/fonts/Neutraface2Text-Light.woff2') format('woff2'),
+        url('base/fonts/Neutraface2Text-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neutraface 2 Text Book';
+    src: local('Neutraface 2 Text Book'),
+        url('base/fonts/Neutraface2Text-Book.woff2') format('woff2'),
+        url('base/fonts/Neutraface2Text-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neutraface 2 Text Demi';
+    src: local('Neutraface 2 Text Demi'),
+        url('base/fonts/Neutraface2Text-Demi.woff2') format('woff2'),
+        url('base/fonts/Neutraface2Text-Demi.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}

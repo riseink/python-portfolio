@@ -1,0 +1,82 @@
+// Typography
+// ----------
+// Base typography styles.
+
+html {
+  font-family: $font-family-default;
+  font-size: $baseline-font-size;
+}
+
+body {
+  font-family: $font-family-default;
+  font-size: $baseline-font-size;
+  line-height: $baseline;
+}
+
+h1, .h1 {
+  @include responsive-font(h1-size);
+  font-family: $font-family-headings;
+  font-weight: $font-weight-headings;
+}
+
+h2, .h2 {
+  @include responsive-font(h2-size);
+  font-family: $font-family-headings;
+  font-weight: $font-weight-headings;
+}
+
+h3, .h3 {
+  @include responsive-font(h3-size);
+  font-family: $font-family-headings;
+  font-weight: $font-weight-headings;
+}
+
+h4, .h4 {
+  @include responsive-font(h4-size);
+  font-family: $font-family-headings;
+  font-weight: $font-weight-headings;
+}
+
+h5, .h5 {
+  @include responsive-font(h5-size);
+  font-family: $font-family-headings;
+  font-weight: $font-weight-headings;
+}
+
+h6, .h6 {
+  @include responsive-font(h6-size);
+  font-family: $font-family-headings;
+  font-weight: $font-weight-headings;
+}
+
+p {
+  @include responsive-font(paragraph);
+  font-family: $font-family-body;
+  font-weight: $font-weight-body;
+}
+
+small {
+  @include responsive-font(small-size);
+  font-family: $font-family-body;
+  font-weight: $font-weight-body;
+}
+
+ul {
+  list-style: disc;
+  padding: 0.5rem 0;
+}
+
+li {
+  padding: 0.5rem 0;
+  margin: 0 1.25rem;
+}
+
+em,
+.italic {
+  font-style: italic;
+}
+
+strong,
+.bold {
+  font-weight: $bold;
+}
